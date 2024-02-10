@@ -1,0 +1,26 @@
+C:\Users\User>tracert -d yahoo.com
+
+Tracing route to yahoo.com [2001:4998:24:120d::1:1]
+over a maximum of 30 hops:
+
+  1     4 ms     2 ms     2 ms  2409:4089:2d82:9ea5::67
+  2     *        *        *     Request timed out.
+  3    33 ms    32 ms   231 ms  2405:200:357:eeee:20::876
+  4   174 ms    28 ms    27 ms  2405:200:801:200::891c
+  5     *        *        *     Request timed out.
+  6     *        *        *     Request timed out.
+  7     *        *        *     Request timed out.
+  8     *        *        *     Request timed out.
+  9     *        *        *     Request timed out.
+ 10     *        *        *     Request timed out.
+ 11   850 ms   336 ms   282 ms  2001:4998:f02d:219::a
+ 12   326 ms   956 ms   441 ms  2001:4998:f00d:a::
+ 13   636 ms   701 ms   575 ms  2001:4998:f00d:2::1
+ 14   529 ms   376 ms   958 ms  2001:4998:f013:1fa::1
+ 15   922 ms   566 ms   957 ms  2001:4998:f00f:208::1
+ 16   895 ms   638 ms   929 ms  2001:4998:c:fc29::1
+ 17   971 ms   338 ms  1258 ms  2001:4998:24:fa07::1
+ 18   338 ms   592 ms   599 ms  2001:4998:24:d010::1
+ 19   900 ms   347 ms   605 ms  2001:4998:24:120d::1:1
+
+Trace complete.

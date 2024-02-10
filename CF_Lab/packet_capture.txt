@@ -1,0 +1,111 @@
+Microsoft Windows [Version 10.0.22621.2361]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>netsh trace start capture=yes
+
+Trace configuration:
+-------------------------------------------------------------------
+Status:             Running
+Trace File:         C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl
+Append:             Off
+Circular:           On
+Max Size:           512 MB
+Report:             Off
+
+
+C:\Windows\System32>netsh trace stop
+Merging traces ... done
+Generating data collection ... done
+The trace file and additional troubleshooting information have been compiled as "C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.cab".
+File location = C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl
+Tracing session was successfully stopped.
+
+
+C:\Windows\System32>msiexec /i MessageAnalyzer.msi
+
+C:\Windows\System32>C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl Newcap.pcap
+
+C:\Windows\System32>Newcap.pcap
+'Newcap.pcap' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\System32>cd windump
+The system cannot find the path specified.
+
+C:\Windows\System32>WinDump -D
+'WinDump' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\System32>etl2pcapng -r C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl -w C:\capturefile.pcapng
+'etl2pcapng' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\System32>etl2pcapng -r C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl -w C:\capturefile.pcapng
+'etl2pcapng' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\System32>pktmon pcapng C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl -o C:\capturefile.pcapng
+Error: cannot open file C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl
+The file or directory is corrupted and unreadable.
+
+C:\Windows\System32>pktmon comp list
+
+Network Adapters:
+   Id MAC Address       Name
+   -- -----------       ----
+   11 74-12-B3-B3-BB-37 Qualcomm QCA61x4A 802.11ac Wireless Adapter
+
+
+C:\Windows\System32>pktmon start --etw -c 9
+Unknown parameter '9'. See pktmon start help.
+
+C:\Windows\System32>pktmon start --etw -c
+
+Logger Parameters:
+    Logger name:        PktMon
+    Logging mode:       Circular
+    Log file:           C:\Windows\System32\PktMon.etl
+    Max file size:      512 MB
+    Memory used:        256 MB
+
+Collected Data:
+    Packet counters, packet capture
+
+Capture Type:
+    All packets
+
+Monitored Components:
+    All
+
+Packet Filters:
+    None
+
+C:\Windows\System32>pktmon pcapng C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl -o capturefile.pcapng
+Error: cannot open file C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl
+The file or directory is corrupted and unreadable.
+
+C:\Windows\System32>netsh trace stop
+There is no trace session currently in progress.
+
+
+C:\Windows\System32>netsh trace start capture=yes
+
+Trace configuration:
+-------------------------------------------------------------------
+Status:             Running
+Trace File:         C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl
+Append:             Off
+Circular:           On
+Max Size:           512 MB
+Report:             Off
+
+
+C:\Windows\System32>netsh trace stop
+Merging traces ... done
+Generating data collection ... done
+The trace file and additional troubleshooting information have been compiled as "C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.cab".
+File location = C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl
+Tracing session was successfully stopped.
+
+
+C:\Windows\System32>

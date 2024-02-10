@@ -1,0 +1,40 @@
+
+C:\Windows\System32>netsh trace start capture=yes CaptureInterface="Wi-Fi"
+
+Trace configuration:
+-------------------------------------------------------------------
+Status:             Running
+Trace File:         C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl
+Append:             Off
+Circular:           On
+Max Size:           512 MB
+Report:             Off
+
+
+C:\Windows\System32>netsh trace show status
+Status:             Running
+Trace File:         C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl
+Append:             Off
+Circular:           On
+Max Size:           512 MB
+Report:             Off
+
+Provider:
+Name:
+Provider Guid:      {00000000-0000-0000-0000-000000000000}
+Level:              0
+Keywords:           0x0
+
+Provider:
+Name:               Microsoft-Windows-NDIS-PacketCapture
+Provider Guid:      {2ED6006E-4729-4609-B423-3EE7BCD678EF}
+Level:              4 (win:Informational)
+Keywords:           0xFFFFFFFFFFFFFFFF (Ethernet802.3,WirelessWAN,Tunnel,Native802.11,VMSwitch,PacketTruncated,PacketStart,PacketEnd,ut:SendPath,ut:ReceivePath,ut:L3ConnectPath,ut:L2ConnectPath,ut:ClosePath,ut:Authentication,ut:Configuration,ut:Global,ut:Dropped,ut:PiiPresent,ut:Packet,ut:Address,ut:StdTemplateHint,ut:StateTransition,win:ResponseTime,Microsoft-Windows-NDIS-PacketCapture/Diagnostic,0x2,0x4,0x8,0x10,0x20,0x40,0x80,0x100,0x400,0x800,0x1000,0x2000,0x4000,0x20000,0x40000,0x80000,0x100000,0x200000,0x400000,0x800000,0x4000000,0x8000000,0x10000000,0x20000000,0x400000000000,0x800000000000,0x2000000000000,0x4000000000000,0x8000000000000,0x10000000000000,0x20000000000000,0x40000000000000,0x80000000000000,0x100000000000000,0x200000000000000,0x400000000000000,0x800000000000000,0x1000000000000000,0x2000000000000000,0x4000000000000000)
+
+
+C:\Windows\System32>netsh trace stop
+Merging traces ... done
+Generating data collection ... done
+The trace file and additional troubleshooting information have been compiled as "C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.cab".
+File location = C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl
+Tracing session was successfully stopped.

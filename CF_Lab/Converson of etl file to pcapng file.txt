@@ -1,0 +1,19 @@
+C:\Users\User\Downloads>etl2pcapng (1).exe
+etl2pcapng <infile> <outfile>
+Converts a packet capture from etl to pcapng format.
+
+C:\Users\User\Downloads>"etl2pcapng (1).exe"
+etl2pcapng <infile> <outfile>
+Converts a packet capture from etl to pcapng format.
+
+C:\Users\User\Downloads>"etl2pcapng (1)"
+etl2pcapng <infile> <outfile>
+Converts a packet capture from etl to pcapng format.
+
+C:\Users\User\Downloads>etl2pcapng C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl Trace.pcapng
+IF: medium=wifi                 ID=0    IfIndex=10
+Converted 930 frames
+
+C:\Users\User\Downloads>etl2pcapng C:\Users\User\AppData\Local\Temp\NetTraces\NetTrace.etl C:\Users\User\AppData\Local\Temp\NetTraces\Trace.pcapng
+IF: medium=wifi                 ID=0    IfIndex=10
+Converted 930 frames

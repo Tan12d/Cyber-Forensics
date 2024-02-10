@@ -1,0 +1,36 @@
+C:\Program Files\Wireshark>tshark -r your_capture_file.pcap -x
+tshark: The file "your_capture_file.pcap" doesn't exist.
+
+// Displays the contents of the capture, in both hex and ascii
+
+C:\Program Files\Wireshark>tshark -r C:\Users\User\AppData\Local\Temp\NetTraces\Trace.pcapng -x
+
+0000  08 01 00 80 52 49 b0 c8 93 73 74 12 b3 b3 bb 37   ....RI...st....7
+0010  52 49 b0 c8 93 73 00 00 aa aa 03 00 00 00 86 dd   RI...s..........
+0020  60 0e 46 02 00 14 06 3f 24 09 40 89 2d 06 07 bd   `.F....?$.@.-...
+0030  90 11 ed e5 ed 6c 97 41 00 64 ff 9b 00 00 00 00   .....l.A.d......
+0040  00 00 00 00 14 c6 77 8f c1 0f 01 bb ec 99 69 66   ......w.......if
+0050  bb 41 0e ff 50 11 00 fd a3 7a 00 00               .A..P....z..
+
+
+// Displays the contents of the capture, in only hex
+
+C:\Program Files\Wireshark>tshark -r C:\Users\User\AppData\Local\Temp\NetTraces\Trace.pcapng --hexdump noascii
+
+0000  08 01 00 80 52 49 b0 c8 93 73 74 12 b3 b3 bb 37
+0010  52 49 b0 c8 93 73 00 00 aa aa 03 00 00 00 86 dd
+0020  60 0e 46 02 00 14 06 3f 24 09 40 89 2d 06 07 bd
+0030  90 11 ed e5 ed 6c 97 41 00 64 ff 9b 00 00 00 00
+0040  00 00 00 00 14 c6 77 8f c1 0f 01 bb ec 99 69 66
+0050  bb 41 0e ff 50 11 00 fd a3 7a 00 00
+
+// Displays the contents of the capture, in both hex and ascii(separated by delimiter)
+
+C:\Program Files\Wireshark>tshark -r C:\Users\User\AppData\Local\Temp\NetTraces\Trace.pcapng --hexdump delimit
+
+0000  08 01 00 80 52 49 b0 c8 93 73 74 12 b3 b3 bb 37   |....RI...st....7|
+0010  52 49 b0 c8 93 73 00 00 aa aa 03 00 00 00 86 dd   |RI...s..........|
+0020  60 0e 46 02 00 14 06 3f 24 09 40 89 2d 06 07 bd   |`.F....?$.@.-...|
+0030  90 11 ed e5 ed 6c 97 41 00 64 ff 9b 00 00 00 00   |.....l.A.d......|
+0040  00 00 00 00 14 c6 77 8f c1 0f 01 bb ec 99 69 66   |......w.......if|
+0050  bb 41 0e ff 50 11 00 fd a3 7a 00 00               |.A..P....z..|
